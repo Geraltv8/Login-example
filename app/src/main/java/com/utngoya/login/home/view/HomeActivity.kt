@@ -25,5 +25,9 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        val username = intent.getStringExtra("USERNAME_KEY")
+
+        binding.textView.text = username
     }
 }
